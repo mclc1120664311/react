@@ -31,5 +31,5 @@ module.exports = {
         hotOnly: true
     },
     // todo
-    piugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [new webpack.HotModuleReplacementPlugin()]
 }
