@@ -1,5 +1,5 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
     entry: "./src/index.js",
@@ -8,7 +8,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /(node_modiles|bower_components)/,
+                exclude: /(node_modules|bower_components)/,
                 loader: "babel-loader",
                 options: { presets: ["@babel/env"] }
             },
@@ -22,7 +22,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
-        filename: "budle.js"
+        filename: "bundle.js"
     },
     devServer: {
         contentBase: path.join(__dirname, "public/"),
@@ -30,6 +30,5 @@ module.exports = {
         publicPath: "http://localhost:3000/dist/",
         hotOnly: true
     },
-    // todo
     plugins: [new webpack.HotModuleReplacementPlugin()]
-}
+};
